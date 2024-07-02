@@ -1,0 +1,154 @@
+{
+  "caps":
+  {
+    "informal": 1,
+    "axes": 6,
+    "usb_cdc": 1,
+    "uart": 1,
+    "spindle_pwm": 1,
+    "spindle_dir": 1,
+    "spindle_sync": 1,
+    "serial_ports": 1,
+    "eeprom": 1,
+    "i2c_strobe": 1,
+    "ganged_axes": 1,
+    "auto_square": 1,
+    "littlefs": 1,
+    "digital_in": 8,
+    "digital_out": 8,
+    "probe": 1,
+    "safety_door": 1,
+    "estop": 1,
+    "mpg_mode": 1,
+    "sdcard": 1,
+    "ethernet": 1,
+    "mcp3221_adc": 1,
+    "pio_board": "teensy41",
+    "build_dir": "grblHAL_Teensy4",
+    "plugins": [
+      { "id": "spindle" },
+      { "id": "modbus" },
+      { "id": "eeprom" },
+      { "id": "sdcard" },
+      { "id": "webui" },
+      { "id": "networking" },
+      { "id": "keypad" },
+      { "id": "macros" },
+      { "id": "plasma" },
+      { "id": "laser_ppi" },
+      { "id": "laser_cluster" },
+      { "id": "laser_coolant" },
+      { "id": "fans" },
+      { "id": "odometer" },
+      { "id": "openpnp" },
+      { "id": "bluetooth" },
+      { "id": "embroidery" }
+    ]
+  },
+  "boards": [
+    {
+      "name": "T41U5XBB",
+      "symbol": "BOARD_T41U5XBB",
+      "URL": "https://github.com/phil-barrett/grbl-teensy-4",
+      "MAP": "grblHAL_Teensy4/src/T41U5XBB_map.h",
+      "caps": {
+        "axes": 5,
+        "ganged_axes": 2,
+        "auto_square": 2,
+        "digital_in": 4,
+        "digital_out": 2,
+        "i2c_strobe": 1,
+        "serial_ports": 1,
+        "sdcard": 1,
+        "ethernet": 1,
+        "eeprom": 1
+      }
+    },
+    {
+      "name": "T41U5XBB Spindle Sync",
+      "symbol": "BOARD_T41U5XBB_SS",
+      "URL": "https://www.grbl.org/single-post/modifying-a-t41u5xbb-for-lathe-spindle-sync",
+      "MAP": "grblHAL_Teensy4/src/T41U5XBB_ss_map.h",
+      "caps": {
+        "axes": 5,
+        "ganged_axes": 2,
+        "auto_square": 2,
+        "digital_in": 4,
+        "digital_out": 2,
+        "i2c_strobe": 1,
+        "serial_ports": 1,
+        "sdcard": 1,
+        "ethernet": 1,
+        "eeprom": 1,
+        "spindle_sync": 1
+      }
+    },
+    {
+      "name": "T41BB5X Pro",
+      "symbol": "BOARD_T41BB5X_PRO",
+      "URL": "https://github.com/phil-barrett/grbl-teensy-4",
+      "MAP": "grblHAL_Teensy4/src/T41BB5X_Pro_map.h",
+      "caps": {
+        "axes": 5,
+        "ganged_axes": 2,
+        "auto_square": 2,
+        "digital_in": 4,
+        "digital_out": 2,
+        "i2c_strobe": 1,
+        "serial_ports": 1,
+        "sdcard": 1,
+        "ethernet": 1,
+        "eeprom": 1,
+        "spindle_sync": 1
+      }
+    },
+    {
+      "name": "E5XMCS_T41",
+      "symbol": "BOARD_E5XMCS_T41",
+      "URL": "https://www.makerstore.com.au/product/elec-e5xmcst41/",
+      "MAP": "grblHAL_Teensy4/src/E5XMCS_T41_map.h",
+      "caps": {
+        "axes": 5,
+        "ganged_axes": 2,
+        "auto_square": 2,
+        "digital_in": 4,
+        "digital_out": 4,
+        "i2c_strobe": 1,
+        "serial_ports": 1,
+        "sdcard": 1,
+        "ethernet": 1,
+        "eeprom": 0,
+        "i2c": 1,
+        "spindle_sync": 0
+      }
+    },
+    { "name": "GRBLHAL2000 - PRINTNC",
+      "symbol": "BOARD_GRBLHAL2000",
+      "URL": "https://github.com/Expatria-Technologies/grblhal_2000_PrintNC",
+      "MAP": "grblHAL_Teensy4/src/GRBLHAL2000_map.h",
+      "caps": {
+        "axes": 4,
+        "digital_in": 4,
+        "digital_out": 3,
+        "i2c_strobe": 1,
+        "serial_ports": 1,
+        "sdcard": 1,
+        "ethernet": 1,
+        "eeprom": 1,
+        "fram": 1,
+        "spindle_sync": 1
+      }
+    },
+    {
+      "name": "T40X101",
+      "symbol": "BOARD_T40X101",
+      "URL": "https://github.com/phil-barrett/grbl-teensy-4",
+      "MAP": "grblHAL_Teensy4/src/T40X101_map.h",
+      "pio_board": "teensy40",
+      "caps": {
+        "axes": 4,
+        "serial_ports": 1
+      }
+    }
+  ]
+}
