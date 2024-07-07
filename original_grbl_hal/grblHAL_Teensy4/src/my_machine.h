@@ -94,7 +94,7 @@ N_AXIS has a default value of 3, edit grbl\config.h to increase.
 //#define EEPROM_IS_FRAM          1 // Uncomment when EEPROM is enabled and chip is FRAM, this to remove write delay.
 //#define SPINDLE_SYNC_ENABLE     1 // Enable spindle sync support (G33, G76). !! NOTE: Alpha quality - enable only for test or verification.
                                     // Currently only available for BOARD_T41BB5X_PRO and BOARD_T41U5XBB_SS.
-//#define ESTOP_ENABLE            0 // When enabled only real-time report requests will be executed when the reset pin is asserted.
+#define ESTOP_ENABLE            0 // When enabled only real-time report requests will be executed when the reset pin is asserted.
                                     // Note: if left commented out the default setting is determined from COMPATIBILITY_LEVEL.
 // Optional control signals:
 // These will be assigned to aux input pins. Use the $pins command to check which pins are assigned.
