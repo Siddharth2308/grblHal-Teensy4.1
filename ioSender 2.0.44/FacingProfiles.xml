@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ArrayOfProfileData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProfileData>
+    <Name>Default</Name>
+    <PassDepthFirst>0.1</PassDepthFirst>
+    <PassDepthLast>0.02</PassDepthLast>
+    <PassDepthMin>0.02</PassDepthMin>
+    <XClearance>0.5</XClearance>
+    <ZClearance>0.5</ZClearance>
+    <Feedrate>200</Feedrate>
+    <FeedrateLast>100</FeedrateLast>
+    <FeedrateMax>200</FeedrateMax>
+    <RPM>100</RPM>
+    <CSSMaxRPM>0</CSSMaxRPM>
+    <CSS>false</CSS>
+  </ProfileData>
+</ArrayOfProfileData>

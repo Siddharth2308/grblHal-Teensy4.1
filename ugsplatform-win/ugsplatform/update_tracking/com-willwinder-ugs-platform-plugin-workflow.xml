@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="com.willwinder.ugs.platform.plugin.workflow">
+    <module_version install_time="1715804362393" last="true" origin="installer" specification_version="2.0.0.2024.05.15.20.17">
+        <file crc="3814135511" name="config/Modules/com-willwinder-ugs-platform-plugin-workflow.xml"/>
+        <file crc="435241683" name="modules/com-willwinder-ugs-platform-plugin-workflow.jar"/>
+    </module_version>
+</module>

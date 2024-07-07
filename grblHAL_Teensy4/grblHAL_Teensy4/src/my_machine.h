@@ -24,7 +24,7 @@
 // NOTE: Only one board may be enabled!
 // If none is enabled pin mappings from generic_map.h will be used
 //#define BOARD_T40X101
-//#define BOARD_T41U5XBB
+#define BOARD_T41U5XBB
 //#define BOARD_T41U5XBB_SS // For a modified T41U5XBB board, allows spindle sync to be enabled.
 //#define BOARD_T41BB5X_PRO
 //#define BOARD_CNC_BOOSTERPACK

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="171.23297mm"
+   height="69.724892mm"
+   viewBox="0 0 171.23297 69.724892"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="bitmap.svg"
+   inkscape:export-xdpi="400"
+   inkscape:export-ydpi="400"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1">
+    <rect
+       x="121.97718"
+       y="517.57886"
+       width="471.42532"
+       height="230.76762"
+       id="rect2" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-3.2470551,-21.055864)">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.68063541,0,0,0.35885752,-82.518324,-168.98723)"
+       id="text2"
+       style="font-size:96px;white-space:pre;shape-inside:url(#rect2);fill:#000000"><tspan
+         x="121.97656"
+         y="602.51562"
+         id="tspan1">Hello </tspan><tspan
+         x="121.97656"
+         y="722.51562"
+         id="tspan3">world</tspan></text>
+  </g>
+</svg>
