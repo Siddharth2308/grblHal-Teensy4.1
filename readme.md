@@ -1,5 +1,10 @@
 # Optimizing GRBL Hal for Teensy 4.1
 
+## Structure
+* [grblHAL_Teensy4_inMachines](./grblHAL_Teensy4_inMachines/) is the firmware provided my InMachines.
+* [original_grbl_hal](./original_grbl_hal/) is the upstream version of grbl-Hal for Teensy 4.X .
+* [Teensy_Barebone_Test](./Teensy_Barebone_Test/) is the Hardware testing script.
+
 ## Issues
 * G-Code Sender cant connect to Teensy 4.1
     * Tried two different g-code senders, same issue.
@@ -9,7 +14,7 @@
 * Controller won't exit 'Alarm Mode' 
     * Once connected controller won't exit 'Alarm Mode'
     * Tried disabling, limit switch IOs and "$X" commands.
-    * Probable Cause, EStop or Limit Switch Pins expect input or the controller tries to achieve "Homing".
+    * Probable Cause, E-Stop or Limit Switch Pins expect input or the controller tries to achieve "Homing".
 
     ```
         >>> G10 P0 L20 X0
