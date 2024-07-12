@@ -370,7 +370,7 @@ static status_code_t disable_lock (sys_state_t state, char *args)
         control_signals_t control_signals = hal.control.get_state();
 
         // Block if self-test failed
-        if(sys.alarm == Alarm_SelftestFailed)
+        if(sys.alarm != Alarm_SelftestFailed) // changed to disable alarm state revet later
             retval = Status_SelfTestFailed;
         // Block if e-stop is active.
         else if (control_signals.e_stop)
@@ -423,7 +423,7 @@ static status_code_t go_home (sys_state_t state, axes_signals_t axes)
     control_signals_t control_signals = hal.control.get_state();
 
     // Block if self-test failed
-    if(sys.alarm == Alarm_SelftestFailed)
+    if(sys.alarm != Alarm_SelftestFailed) // chnge by siddharth
         retval = Status_SelfTestFailed;
     // Block if e-stop is active.
     else if (control_signals.e_stop)
