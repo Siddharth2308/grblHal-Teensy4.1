@@ -51,7 +51,7 @@ N_AXIS has a default value of 3, edit grbl\config.h to increase.
 
 */
 #ifndef USB_SERIAL_CDC
-#define USB_SERIAL_CDC        0 // 1 for Arduino class library and 2 for PJRC C library. Comment out or set to 0 to use UART communication.
+#define USB_SERIAL_CDC        1 // 1 for Arduino class library and 2 for PJRC C library. Comment out or set to 0 to use UART communication.
 #endif
 //#define USB_SERIAL_WAIT         1 // Wait for USB connection before starting grblHAL.
 //#define BLUETOOTH_ENABLE        2 // Set to 2 for HC-05 module. Requires and claims one auxillary input pin.
