@@ -140,16 +140,19 @@ bool protocol_main_loop (void)
     } else if(settings.probe.enable_protection && hal.control.get_state().probe_triggered) {
         system_raise_alarm(Alarm_ProbeProtect);
         grbl.report.feedback_message(Message_ProbeProtected);
-    } else if (limits_homing_required()) {
+    } 
+    else if (limits_homing_required()) {
         // Check for power-up and set system alarm if homing is enabled to force homing cycle
         // by setting Grbl's alarm state. Alarm locks out all g-code commands, including the
         // startup scripts, but allows access to settings and internal commands.
         // Only a successful homing cycle '$H' will disable the alarm.
         // NOTE: The startup script will run after successful completion of the homing cycle. Prevents motion startup
         // blocks from crashing into things uncontrollably. Very bad.
+
         system_raise_alarm(Alarm_HomingRequired);
         grbl.report.feedback_message(Message_HomingCycleRequired);
-    } else if (settings.limits.flags.hard_enabled &&
+    }
+     else if (settings.limits.flags.hard_enabled &&
                 settings.limits.flags.check_at_init &&
                  (limit_signals_merge(hal.limits.get_state()).value & sys.hard_limits.mask)) {
         if(sys.alarm == Alarm_LimitsEngaged && hal.control.get_state().limits_override)

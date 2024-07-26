@@ -19,22 +19,22 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   digitalWrite(AXIS_DIR, HIGH);
-  for(int x = 0; x < 800; x++){
+  for(int x = 0; x < 1600; x++){
     digitalWrite(AXIS_PULSE, HIGH);
-    delayMicroseconds(500);
+    delayMicroseconds(25);
     digitalWrite(AXIS_PULSE, LOW);
-    delayMicroseconds(500);
+    delayMicroseconds(25);
   }
 
   delay(1000);
 
   digitalWrite(AXIS_DIR, LOW);
-  for (int x = 0; x < 800; x++)
+  for (int x = 0; x < 1600; x++)
   {
     digitalWrite(AXIS_PULSE, HIGH);
-    delayMicroseconds(500);
+    delayMicroseconds(25);
     digitalWrite(AXIS_PULSE, LOW);
-    delayMicroseconds(500);
+    delayMicroseconds(25);
   }
 
   delay(1000);

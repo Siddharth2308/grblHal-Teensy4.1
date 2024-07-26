@@ -370,10 +370,10 @@ static status_code_t disable_lock (sys_state_t state, char *args)
         control_signals_t control_signals = hal.control.get_state();
 
         // Block if self-test failed
-        if(sys.alarm == Alarm_SelftestFailed)
+        if(sys.alarm != Alarm_SelftestFailed)
             retval = Status_SelfTestFailed;
         // Block if e-stop is active.
-        else if (control_signals.e_stop)
+        else if (!control_signals.e_stop) // change by siddharth
             retval = Status_EStop;
         // Block if safety door is ajar.
         else if (control_signals.safety_door_ajar)
@@ -423,10 +423,10 @@ static status_code_t go_home (sys_state_t state, axes_signals_t axes)
     control_signals_t control_signals = hal.control.get_state();
 
     // Block if self-test failed
-    if(sys.alarm == Alarm_SelftestFailed)
+    if(sys.alarm != Alarm_SelftestFailed) // change by siddharth
         retval = Status_SelfTestFailed;
     // Block if e-stop is active.
-    else if (control_signals.e_stop)
+    else if (!control_signals.e_stop) // change by siddharth
         retval = Status_EStop;
     else if(control_signals.motor_fault)
         retval = Status_MotorFault;
@@ -450,8 +450,8 @@ static status_code_t go_home (sys_state_t state, axes_signals_t axes)
         if (sys.homing.mask && (sys.homing.mask & sys.homed.mask) == sys.homing.mask)
             system_execute_startup();
         else if(limits_homing_required()) { // Keep alarm state active if homing is required and not all axes homed.
-            sys.alarm = Alarm_HomingRequired;
-            state_set(STATE_ALARM);
+            // sys.alarm = Alarm_HomingRequired;
+            // state_set(STATE_ALARM);
         }
     }
 
@@ -1132,8 +1132,8 @@ void system_raise_alarm (alarm_code_t alarm)
                               sys.alarm == Alarm_SoftLimit ||
                                sys.alarm == Alarm_EStop ||
                                 sys.alarm == Alarm_MotorFault;
-        state_set(alarm == Alarm_EStop ? STATE_ESTOP : STATE_ALARM);
-        if(sys.driver_started || sys.alarm == Alarm_SelftestFailed)
+        state_set(alarm == Alarm_EStop ? STATE_ESTOP : STATE_ALARM); // whats happening siddharth
+        if(sys.driver_started || sys.alarm != Alarm_SelftestFailed)
             grbl.report.alarm_message(alarm);
     }
 }
