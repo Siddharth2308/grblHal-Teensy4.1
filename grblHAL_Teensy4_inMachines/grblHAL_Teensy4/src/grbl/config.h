@@ -1789,10 +1789,10 @@ Timezone offset from UTC in hours, allowed range is -12.0 - 12.0.
 */
 ///@{
 #if !defined DEFAULT_X_MAX_RATE || defined __DOXYGEN__
-#define DEFAULT_X_MAX_RATE 40000.0f // mm/min
+#define DEFAULT_X_MAX_RATE 75000.0f // mm/min -> changed DEFAULT rate from 40K to 75K - Siddharth
 #endif
 #if !defined DEFAULT_Y_MAX_RATE || defined __DOXYGEN__
-#define DEFAULT_Y_MAX_RATE 40000.0f // mm/min
+#define DEFAULT_Y_MAX_RATE 75000.0f // mm/min -> changed DEFAULT rate from 40K to 75K - Siddharth
 #endif
 #if !defined DEFAULT_Z_MAX_RATE || defined __DOXYGEN__
 #define DEFAULT_Z_MAX_RATE 200.0f // mm/min
@@ -1818,10 +1818,10 @@ Timezone offset from UTC in hours, allowed range is -12.0 - 12.0.
 */
 ///@{
 #if !defined DEFAULT_X_ACCELERATION || defined __DOXYGEN__
-#define DEFAULT_X_ACCELERATION 500.0f // mm/sec^2
+#define DEFAULT_X_ACCELERATION 50000.0f // mm/sec^2 -> changed DEFAULT rate from 500 to 50000 - Siddharth
 #endif
 #if !defined DEFAULT_Y_ACCELERATION || defined __DOXYGEN__
-#define DEFAULT_Y_ACCELERATION 500.0f // mm/sec^2
+#define DEFAULT_Y_ACCELERATION 50000.0f // mm/sec^2 -> changed DEFAULT rate from 500 to 50000 - Siddharth
 #endif
 #if !defined DEFAULT_Z_ACCELERATION || defined __DOXYGEN__
 #define DEFAULT_Z_ACCELERATION 100.0f // mm/sec^2
