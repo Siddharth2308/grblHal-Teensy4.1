@@ -1708,7 +1708,10 @@ static void settings_changed (settings_t *settings, settings_changed_flags_t cha
         // Stepper pulse timeout setup.
         PULSE_TIMER_CSCTRL &= ~(TMR_CSCTRL_TCF1|TMR_CSCTRL_TCF2);
 
-        pulse_length = (uint16_t)((float)F_BUS_MHZ * (settings->steppers.pulse_microseconds - STEP_PULSE_LATENCY));
+        // pulse_length = (uint16_t)((float)F_BUS_MHZ * (settings->steppers.pulse_microseconds)); // original
+
+        // The below lines implement "Aggressive buffering" to increase the feed rate- siddharth
+        pulse_length = (uint16_t)((float)F_BUS_MHZ * (settings->steppers.pulse_microseconds - STEP_PULSE_LATENCY)); // siddharth
 
         if(hal.driver_cap.step_pulse_delay && settings->steppers.pulse_delay_microseconds > 0.0f) {
             float delay = settings->steppers.pulse_delay_microseconds - STEP_PULSE_LATENCY;
